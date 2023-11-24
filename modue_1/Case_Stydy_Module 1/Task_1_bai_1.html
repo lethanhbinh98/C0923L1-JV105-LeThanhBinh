@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tinh luong nhan vien</h1>
+Hay nhap luong cua nhan vien<br>
+<input type="text" id="money">
+<button onclick="tinhLuong()">Tinh</button>
+
+    <script>
+        function tinhLuong() {
+            let a = document.getElementById('money').value;
+            let b;
+            let c;
+            if (a >= 15000000){
+                b = a / 100 * 20;
+                c = a - b;
+                document.write("So tien thue cua muc luong " + a + " la : " + b + "<br>");
+                document.write("So luong thuc linh la : " + c);
+            }
+            if (a >= 7000000 && a < 15000000){
+                b = a / 100 * 10;
+                c = a - b;
+                document.write("So tien thue cua muc luong " + a + " la : " + b + "<br>");
+                document.write("So luong thuc linh la : " + c);
+            }
+            if (a < 7000000){
+                b = a / 100 * 5;
+                c = a - b;
+                document.write("So tien thue cua muc luong " + a + " la : " + b + "<br>");
+                document.write("So luong thuc linh la : " + c);
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>
