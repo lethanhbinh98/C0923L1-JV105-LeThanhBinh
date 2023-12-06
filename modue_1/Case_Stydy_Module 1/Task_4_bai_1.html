@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function chuanHoa(string){
+            let a = string.split(" ");
+            let b = [];
+            for (i = 0; i < a.length; i++){
+                if (a[i] !== ""){
+                   b.push(a[i]);
+                }
+            }
+            let newstr = b.join(" ");
+            let c = newstr.toLowerCase().split(" ");
+            for (i = 0; i < c.length; i++){
+                c[i] = c[i][0].toUpperCase()+c[i].slice(1);
+            }
+            return c.join(" ");
+        }
+        function timTu(str){
+            let a = str.split(" ");
+            maxL = a[0];
+            for (i = 0; i < a.length; i++){
+                if(maxL.length < a[i].length){
+                    maxL = a[i];
+                }
+            }
+            return maxL;
+        }
+        let chuoi = prompt("Nhap chuoi ban muon chuan hoa")
+        console.log(chuoi);
+        console.log(chuanHoa(chuoi));
+        console.log(timTu(chuanHoa(chuoi)));
+    </script>
+</body>
+</html>
