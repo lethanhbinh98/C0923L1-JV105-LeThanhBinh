@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function soLuong(){
+            let number = prompt("Nhap so luong ban muon");
+            return number;
+        }
+        function thanhToan(number,gia) {
+            return number * gia;
+        }
+        let a;
+        let b = 0;
+        let chon;
+        do {
+             chon = parseInt(prompt(
+                '========== MENU ========== \n' +
+                '1.Cafe/15000 \n' +
+                '2.Cam vắt/20000 \n' +
+                '3.Nước ép cà rốt/20000 \n' +
+                '4.Nước ép cà chua/20000 \n' +
+                '5.Nước lọc/10000 \n' +
+                '6.Nước dừa/25000 \n' +
+                '7.Thanh toán \n'))
+            switch (chon){
+                case 1 :
+                   a = soLuong();
+                   b = b + thanhToan(a,15000);
+                   break;
+                case 2 :
+                    a = soLuong();
+                    b = b + thanhToan(a,20000);
+                    break;
+                case 3 :
+                    a = soLuong();
+                    b = b + thanhToan(a,20000);
+                    break;
+                case 4 :
+                    a = soLuong();
+                    b = b + thanhToan(a,20000);
+                    break;
+                case 5 :
+                    a = soLuong();
+                    b = b + thanhToan(a,10000);
+                    break;
+                case 6 :
+                    a = soLuong();
+                    b = b + thanhToan(a,25000);
+                    break;
+                case 7 :
+                    alert("So tien ban phai tra la : " + b);
+                    break;
+            }
+        }while (chon < 7);
+    </script>
+</body>
+</html>

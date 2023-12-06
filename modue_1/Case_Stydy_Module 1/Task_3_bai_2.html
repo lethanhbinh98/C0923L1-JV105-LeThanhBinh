@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = [];
+        let b = [];
+        let c = [];
+        let n = parseInt(prompt("Nhap so phan tu mang a"))
+        for (i = 0; i < n; i++){
+            a[i] = parseInt(prompt("Nhap phan tu thu " + i))
+        }
+        let m = parseInt(prompt("Nhap so phan tu mang b"))
+        for (i = 0; i < m; i++){
+            b[i] = parseInt(prompt("Nhap phan tu thu " + i))
+        }
+        for (i = 0; i < a.length; i++){
+            if (b.indexOf(a[i])=== -1){
+                c.push(a[i]);
+            }
+        }
+        for (i = 0; i < b.length; i++){
+            if (a.indexOf(b[i])=== -1){
+                c.push(b[i]);
+            }
+        }
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    </script>
+</body>
+</html>
