@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Apple{
+            constructor(khoiLuong) {
+                this.khoiLuong = khoiLuong;
+            }
+            getKhoiLuong(){
+                return this.khoiLuong
+            }
+            setKhoiuong(khoiluong){
+                return this.khoiLuong = khoiLuong;
+            }
+
+        }
+        class Human{
+            constructor(ten, gioiTinh, canNang, noi) {
+                this.ten = ten;
+                this.gioiTinh = gioiTinh;
+                this.canNang = canNang;
+                this.noi = noi;
+            }
+            getNoi(){
+                return this.noi;
+            }
+            setNoi(noi){
+                return this.noi = noi;
+            }
+            getTen(){
+                return this.ten;
+            }
+            setTen(){
+                return this.ten = ten;
+            }
+            getGioiTinh(){
+                return this.gioiTinh;
+            }
+            setGioiTinh(gioiTinh){
+                return this.gioiTinh = gioiTinh;
+            }
+            getCanNang(){
+                return this.canNang;
+            }
+            setCanNang(canNang){
+                return this.canNang = canNang;
+            }
+            eat(Apple){
+                if (Apple.khoiLuong > 0){
+                   Apple.khoiLuong --;
+                }else if (Apple.khoiLuong = 0){
+                    alert("Da an het tao");
+                }
+            }
+            Noi(){
+                this.noi = prompt("Hay noi gi do");
+                console.log(this.noi);
+            }
+            checkApple(Apple){
+                console.log(Apple);
+            }
+
+        }
+        let tao = new Apple(10);
+        let nguoi = new Human("Binh","Nam", 60, "");
+
+
+
+    </script>
+</body>
+</html>

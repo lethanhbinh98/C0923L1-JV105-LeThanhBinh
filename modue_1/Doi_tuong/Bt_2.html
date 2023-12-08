@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Temperature{
+            constructor(c) {
+                this.c = c;
+            }
+            getF(){
+                return 9 % 5 * this.c + 32;
+            }
+            getK(){
+                return this.c + 273.15;
+            }
+        }
+        let rec = new  Temperature(25);
+        document.write("Tu 25 do C sang do F la : " + rec.getF()+ "<br>");
+        document.write("Tu 25 do C sang do K la : " + rec.getK());
+    </script>
+</body>
+</html>

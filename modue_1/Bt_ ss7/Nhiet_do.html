@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let i = prompt("Nhap nhiet do hien tai : ");
+        while (i < 20 || i > 100){
+            if (i < 20){
+                i = prompt("Hay tang nhiet do");
+            }
+            if (i > 100){
+                i = prompt("Hay giam nhiet do");
+            }
+        }
+        document.write("Nhiet do hien tai la :" + i);
+    </script>
+</body>
+</html>

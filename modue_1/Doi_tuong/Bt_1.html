@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Rectangle {
+            constructor(width,height) {
+                this.width = width;
+                this.height = height;
+            }
+            getChuvi(){
+                return (this.width +this.height) * 2;
+            }
+            getDientich(){
+                return this.height * this.width;
+            }
+        }
+        let rec = new Rectangle(20,10);
+        document.write("Chu vi la : " + rec.getChuvi() + "<br>");
+        document.write("Dien tich la : " + rec.getDientich());
+    </script>
+</body>
+</html>

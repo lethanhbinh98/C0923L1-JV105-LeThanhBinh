@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let nameStar = [ 'Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' , 'Regulus'];
+        let nameChom = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let ten = prompt("Nhap ten ngoi sao");
+        timSao(ten);
+        function timSao(a) {
+            for (i = 0; i < nameStar.length; i++){
+                if (a === nameStar[i]){
+                  return   document.write(nameChom[i]);
+                }else {
+                   return  document.write("Ngoi sao ban tim chua co du lieu");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

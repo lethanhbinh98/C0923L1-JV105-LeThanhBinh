@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhap tu can tim :
+<input type="text" id="eng">
+<button onclick="dich()">Dich</button>
+<p id="result"></p>
+    <script>
+        function dich(){
+            let a = ["táo","chuối","bút"];
+            let b = ["apple","banana","pen"];
+            let eng = document.getElementById("eng").value;
+            let index_b = 0;
+            let resut = "";
+            for (i = 0; i < b.length; i++){
+                if (eng == b[i]){
+                    index_b = i;
+                }
+                for (j = 0; j < a.length; j++){
+                    if (index_b == j){
+                        resut = a[j];
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = resut;
+        }
+    </script>
+</body>
+</html>

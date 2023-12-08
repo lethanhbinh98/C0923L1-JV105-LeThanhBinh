@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        class Mobie{
+            constructor(pin, dangSoanThao, hopThuDen, tinDaGui, trangThai) {
+                this.pin = pin;
+                this.dangSoanThao = dangSoanThao;
+                this.hopThuDen = hopThuDen;
+                this.tinDaGui = tinDaGui;
+                this.trangThai = trangThai;
+            }
+            getPin(){
+                return this.pin;
+            }
+            setPin(pin){
+                return this.pin = pin;
+            }
+            getDangSoanThao(){
+                return this.dangSoanThao;
+            }
+            setDangSoanThao(dangSoanThao){
+                return this.dangSoanThao = dangSoanThao;
+            }
+            getHopThuDen(){
+                return this.hopThuDen;
+            }
+            setHopThuDen(hopThuDen){
+                return this.hopThuDen = hopThuDen;
+            }
+            getTinDaGui(){
+                return this.tinDaGui;
+            }
+            setTinDaGui(tinDaGui){
+                return this.tinDaGui = tinDaGui;
+            }
+            getTrangThai(){
+                return this.trangThai;
+            }
+            setTrangThai(trangThai){
+                return this.trangThai = trangThai;
+            }
+            checkMobile(){
+                if (this.trangThai){
+                    alert("Dien thoai dang bat");
+                }else {
+                    alert("Dien thoai dang tat");
+                }
+            }
+            batMobile(){
+                if (this.trangThai){
+                    alert("Dien thoai dang bat")
+                }else {
+                    this.trangThai = true;
+                }
+            }
+            tatMobile(){
+                if (!this.trangThai){
+                    alert("Dien thoai dang tat")
+                }else {
+                    this.trangThai = false;
+                }
+            }
+            xacPin(){
+                if (this.pin < 100){
+                    this.pin = 100;
+                }else {
+                    alert("Pin da day");
+                }
+            }
+            giamPin(){
+                if (this.pin > 0){
+                    this.pin --;
+                }else {
+                    this.trangThai = false;
+                }
+            }
+            soanTinNhan(){
+                if (this.trangThai){
+                    this.dangSoanThao = prompt("Hay soan tin nhan")
+                    this.giamPin();
+                }else {
+                    alert("Dien thoai chua bat")
+                }
+            }
+            guiTinNhan(tinNhan, dienThoaiCanGui){
+                if (this.trangThai){
+                    dienThoaiCanGui.getHopThuDen.push(tinNhan);
+                    this.giamPin();
+                }else {
+                    alert("Chua bat dien thoai");
+                }
+            }
+            nhanTinNhan(tinNhan){
+                this.hopThuDen.push(tinNhan);
+            }
+            xemTinHopThuDen(){
+                for (let i = 0; i < this.hopThuDen.length; i++){
+                    const tinNhan = this.hopThuDen[i];
+                    console.log(tinNhan);
+                }
+            }
+            xemTinDaGui(){
+                for (let i = 0; i < this.tinDaGui.length; i++){
+                    const tinNhan = this.tinDaGui[i];
+                    console.log(tinNhan);
+                }
+            }
+
+        }
+        let nokia = new Mobie(10, "", [], [], true);
+        let iphone = new Mobie(10, "", [], [], false);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="doan_so()">Start</button>
+    <script>
+        function doan_so(){
+            let a = parseInt(prompt("Hay nhap so gioi han muon doan"));
+            let b = Math.floor(Math.random()* a);
+            let check = prompt("So ban doan la :");
+            let count = 0;
+            while (check != b){
+                count ++;
+                if (count === 4){
+                    alert("Ban da het lan doan");
+                    break;
+                }else if (check < b){
+                    alert("So ban doan be hon");
+                }else {
+                    alert("So ban doan lon hon");
+                }
+                check = prompt("Nhap so ban doan")
+            }
+            if (count == 4){
+                document.write("Ban het so lan doan");
+            }else {
+                document.write("ban da doan dung. Chuc mung ban");
+            }
+        }
+    </script>
+</body>
+</html>
